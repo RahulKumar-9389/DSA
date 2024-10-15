@@ -5,9 +5,8 @@ void printTranspose(int arr[][3], int rows, int cols)
 {
     for (int i = 0; i < rows; i++)
     {
-        for (int j = i + 1; j < cols; j++) // Only swap the upper triangle
+        for (int j = i + 1; j < cols; j++)
         {
-            // Swap arr[i][j] and arr[j][i]
             swap(arr[i][j], arr[j][i]);
         }
     }
