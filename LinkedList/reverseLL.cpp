@@ -33,32 +33,50 @@ void printLinkedList(Node *head)
     cout << endl;
 }
 
-// Reverse the linked list
+// Reverse the linked list using loop
+// Node *reverseLinkedList(Node *head)
+// {
+//     if (head == NULL)
+//     {
+//         cout << "LinkedList is empty!";
+//         return NULL;
+//     }
+
+//     if (head->next == NULL)
+//     {
+//         return head;
+//     }
+
+//     Node *prev = NULL;
+//     Node *temp = head;
+
+//     while (temp != NULL)
+//     {
+//         Node *front = temp->next;
+
+//         temp->next = prev;
+//         prev = temp;
+//         temp = front;
+//     }
+//     return prev;
+// }
+
+// Reverse the linked list using recursion
 Node *reverseLinkedList(Node *head)
 {
-    if (head == NULL)
-    {
-        cout << "LinkedList is empty!";
-        return NULL;
-    }
 
-    if (head->next == NULL)
+    if (head == NULL || head->next == NULL)
     {
         return head;
     }
 
-    Node *prev = NULL;
-    Node *temp = head;
+    Node *newHead = reverseLinkedList(head->next);
 
-    while (temp != NULL)
-    {
-        Node *front = temp->next;
+    Node *front = head->next;
+    front->next = head;
+    head->next = NULL;
 
-        temp->next = prev;
-        prev = temp;
-        temp = front;
-    }
-    return prev;
+    return newHead;
 }
 
 int main()
