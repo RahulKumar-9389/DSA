@@ -13,5 +13,14 @@ int main()
 {
     int n = 5;
     cout << fibonacci(n);
+
+    int fib = 1;
+
+    for (int i = n; i > 0; i--)
+    {
+        fib = fib * i;
+    }
+
+    cout << fib;
     return 0;
 }
