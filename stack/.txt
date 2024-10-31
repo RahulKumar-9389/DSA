@@ -1,0 +1,22 @@
+1. What is stack?
+    stack is linear data structure that follows last in firtst (LIFO) out principle. That means that last element addedd to the stack is the firts one to be removed.
+
+2. Basic Operations:
+    (i)   push -: adds an element to the top in the stack
+    (ii)  pop -: Remove the top element
+    (iii) top -: Returns the top element of the stack
+    (iv)  size -: Returns the numbers of the elements
+
+push(1);
+push(2);
+push(3);
+push(4);
+
+[1, 2, 3, 4];
+
+4 is top element;
+
+pop(); remove the top element
+Now 3 is the top element
+
+top(); Returns the top element which is 3
