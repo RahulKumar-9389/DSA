@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void reverseString(string str)
+void reverseString(string &str)
 {
-    int start = str[0];
-    int end = str.length();
+    int start = 0;
+    int end = str.length() - 1;
 
     while (start < end)
     {
