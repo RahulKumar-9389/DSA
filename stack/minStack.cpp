@@ -79,20 +79,11 @@ public:
 int main()
 {
     Stack s;
-    s.push(12);                                                    // 12
-    s.push(15);                                                    // 12, 15
-    s.push(10);                                                    // 12, 15, 10
-    cout << "Min element in the stack is: " << s.getMin() << endl; // 10
-
-    s.pop(); //   12, 15
-
-    cout << "Min element in the stack is: " << s.getMin() << endl; // 12
-
-    cout << "Top element is: " << s.Top() << endl; // 15
-
-    s.push(10); // 12, 15, 10
-
-    cout << "Top element is: " << s.Top() << endl; // 10
+    s.push(12);
+    s.push(15);
+    s.push(10);
+    s.push(8);
+    s.push(9);
 
     return 0;
 }
