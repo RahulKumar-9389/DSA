@@ -2,61 +2,42 @@
 #include <vector>
 using namespace std;
 
-void findCombination(vector<int> &arr, int index, int target, vector<int> &temp, vector<vector<int>> &ans)
+void combinationSum(int arr[], int target, int index, vector<int> &ans)
 {
-    if (target == 0) // Base case: target reached
+
+    if (target == 0)
     {
-        ans.push_back(temp);
+        for (int i = 0; i < ans.size(); i++)
+        {
+            cout << ans[i] << " ";
+        }
+        cout << endl;
         return;
     }
 
-    if (index == arr.size()) // No more elements to check
+    if (index >= 3)
     {
         return;
     }
 
-    // If arr[index] can be used in the combination (only if it is <= target)
     if (arr[index] <= target)
     {
-        temp.push_back(arr[index]);                                  // Choose the current number
-        findCombination(arr, index, target - arr[index], temp, ans); // Try with the same index (repetition allowed)
-        temp.pop_back();                                             // Backtrack
+        ans.push_back(arr[index]);
+        combinationSum(arr, target - arr[index], index, ans);
+        ans.pop_back();
     }
 
-    // Skip the current number and move to the next
-    findCombination(arr, index + 1, target, temp, ans);
-}
-
-vector<vector<int>> combinationSum(vector<int> &arr, int target)
-{
-    vector<int> temp;
-    vector<vector<int>> ans;
-
-    findCombination(arr, 0, target, temp, ans);
-    return ans;
+    combinationSum(arr, target, index + 1, ans);
 }
 
 int main()
 {
-    vector<int> arr = {2, 3, 6, 7};
 
-    vector<vector<int>> result = combinationSum(arr, 7);
+    int arr[3] = {2, 3, 5};
+    vector<int> ans;
+    int target = 8;
 
-    cout << "[ ";
-    for (int i = 0; i < result.size(); i++)
-    {
-        cout << "[";
-        for (int j = 0; j < result[i].size(); j++)
-        {
-            cout << result[i][j];
-            if (j != result[i].size() - 1) // To avoid trailing commas
-                cout << " ";
-        }
-        cout << "]";
-        if (i != result.size() - 1) // To avoid trailing commas
-            cout << ", ";
-    }
-    cout << " ]" << endl;
+    combinationSum(arr, target, 0, ans);
 
     return 0;
 }
