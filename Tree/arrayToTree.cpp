@@ -42,9 +42,22 @@ Node *arrayToTree(int arr[])
     return solve(arr, 0, 4);
 }
 
+void preOrderTraversal(Node *root)
+{
+    if (!root)
+    {
+        return;
+    }
+    cout << root->data << ",";
+    preOrderTraversal(root->left);
+    preOrderTraversal(root->right);
+}
+
 int main()
 {
 
     int arr[5] = {-10, -3, 0, 5, 9};
+    Node *root = arrayToTree(arr);
+    preOrderTraversal(root);
     return 0;
 }
