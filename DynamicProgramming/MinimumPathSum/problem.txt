@@ -1,0 +1,18 @@
+🎯 Problem: Minimum Path Sum
+
+
+
+📍Input:
+A m x n grid filled with non-negative numbers. Each cell in the grid represents a non-negative integer.
+
+You start at the top-left corner of the grid (position (0, 0)), and you must reach the bottom-right corner of the grid (position (m-1, n-1)).
+
+
+
+📍Output:
+Return the minimum sum of all numbers along a path from the top-left to the bottom-right corner of the grid.
+
+
+🚶‍♀️‍➡️Movement:
+At each step, you can only move down or right.
+
