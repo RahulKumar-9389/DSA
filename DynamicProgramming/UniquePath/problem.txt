@@ -1,0 +1,9 @@
+Given M x N matrix.
+You are present at point A which is top left cell of matrix.
+Your destination is point B which is bottom-right cell of the matrix.
+
+
+Your task is to find the total number of unique paths from the cell MATRIX[0][0] to MATRIX['M' - 1]['N' - 1].
+
+
+To traverse in the matrix, you can either move Right or Down at each step. For example in a given point MATRIX[i] [j], you can move to either MATRIX[i + 1][j] or MATRIX[i][j + 1].
