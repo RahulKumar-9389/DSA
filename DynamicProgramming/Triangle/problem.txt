@@ -1,0 +1,20 @@
+1. Input:
+    You are given a triangle array (a 2D list of integers).
+    Each row in the triangle represents a level of the triangle, with each level containing one more element than the previous level.
+
+
+2. Goal:
+    Find the minimum path sum from top to bottom.
+    You can move to adjacent numbers in the row directly below. More formally, if you are at index i in the current row, you can move to index i or index i + 1 in the row below.
+
+
+3.Constraints:
+    At each step, you can only move to an adjacent number (either directly below or to the right).
+
+
+4.Solution Approach:
+    Start at the top of the triangle.
+    Traverse the triangle from bottom to top, updating each element with the minimum path sum.
+    At each position, add the minimum value of the two adjacent numbers from the row below to the current number.
+    Continue this process until you reach the top.
+    The top element will contain the minimum path sum once all rows have been processed.
