@@ -1,0 +1,18 @@
+Given:
+    An N*M matrix filled with integer numbers.
+
+
+Task:
+    Find the maximum sum that can be obtained from a path starting from any cell in the first row to any cell in the last row.
+
+
+
+Movement Rules:
+    From a cell at position (row, col), you can move to one of the following positions in the next row:
+    Down: (row+1, col)
+    Down left diagonal: (row+1, col-1)
+    Down right diagonal: (row+1, col+1)
+
+
+Objective:
+    Determine the maximum sum achievable following the allowed movements from any cell in the first row to any cell in the last row.
