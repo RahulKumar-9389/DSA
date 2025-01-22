@@ -25,7 +25,7 @@ int solve(int ind, int W, vector<int> &wt, vector<int> &val)
     int take = INT_MIN;
     if (wt[ind] <= W)
     {
-        take = val[ind] + solve(ind - 1, W - wt[ind], wt, val);
+        take = val[ind] + solve(ind - 1, (W - wt[ind]), wt, val);
     }
 
     return max(take, notTake);
